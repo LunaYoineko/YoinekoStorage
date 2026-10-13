@@ -8,6 +8,7 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173,
     strictPort: true,
+    allowedHosts: ['yoineko-storage.local'],
     headers: {
       // Private Network Access (PNA) 対応
       // .local ドメイン経由のアクセスを許可するために必要
