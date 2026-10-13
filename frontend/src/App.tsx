@@ -20,7 +20,7 @@ export default function App() {
   const [fileList, setFileList] = useState<FileItem[]>([]);
   const [status, setStatus] = useState<string>("");
 
-  const API_ENDPOINT = "http://localhost:5000/api/"
+  const API_ENDPOINT = "/api/"
 
   const fetchFileList = async (currentUserId: number) => {
     try {
@@ -58,7 +58,7 @@ export default function App() {
     try {
       const res = await fetch(`${API_ENDPOINT}login`, {
         method: "POST",
-        headers: { "Content-Type": "appliaction/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
       const data = await res.json();

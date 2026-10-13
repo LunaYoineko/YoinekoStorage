@@ -9,6 +9,12 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     allowedHosts: ['yoineko-storage.local'],
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+    },
     headers: {
       // Private Network Access (PNA) 対応
       // .local ドメイン経由のアクセスを許可するために必要
