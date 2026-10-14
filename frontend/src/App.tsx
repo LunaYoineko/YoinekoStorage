@@ -20,7 +20,7 @@ export default function App() {
   const [fileList, setFileList] = useState<FileItem[]>([]);
   const [status, setStatus] = useState<string>("");
 
-  const API_ENDPOINT = "/api/"
+  const API_ENDPOINT = "http://localhost:5000/api/"
 
   const fetchFileList = async (currentUserId: number) => {
     try {
